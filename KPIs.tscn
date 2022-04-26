@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/godot-KPIs-plugin/assets/fonts/Consolas.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 1 )
+
+[node name="KPIs" type="RichTextLabel" groups=[
+"kpis_plugin_displays",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[u]FPS:[/u] 60.0
+Process: 21.4
+Physics process:0.1
+"
+text = "FPS: 60.0
+Process: 21.4
+Physics process:0.1
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
