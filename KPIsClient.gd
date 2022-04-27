@@ -35,7 +35,10 @@ func _process(_delta):
 
 
 remote func _feed_data(data):
-	var kpis_display = get_tree().get_nodes_in_group("kpis_plugin_displays")[0]
+	var kpis_displays = get_tree().get_nodes_in_group("kpis_plugin_displays")
+	if kpis_displays.empty():
+		return
+	var kpis_display = kpis_displays[0]
 	var user_kpis = ""
 	for user_kpi in data["user_kpis"]:  # TODO: sort
 		user_kpis += "\n" + user_kpi + ": " + str(data["user_kpis"][user_kpi])
